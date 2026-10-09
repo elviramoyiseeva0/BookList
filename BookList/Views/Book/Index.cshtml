@@ -1,0 +1,14 @@
+﻿@using BookList.Models
+@using BookList.ViewModel
+
+@model IEnumerable<Book>
+@{
+    ViewData["Title"] = "Books Catalog";
+}
+
+<table class="table">
+    @foreach (Book b in Model)
+    {
+        <tr><td>@b.Title</td><td>@b.Author</td><td>@b.Genre</td><td>@b.Year</td></tr>
+    }
+</table>
